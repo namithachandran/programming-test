@@ -1,0 +1,19 @@
+<h1>Listing students</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mark</th>
+  </tr>
+ 
+ <% @students.each do |student| %>
+    <tr>
+      <td><%= student.name %></td>
+      <td><%= student.email%></td>
+      <td><%= student.mark%></td>
+      <td><%= student.subject%></td>
+      <td><%= link_to 'Show', student_path(student) %></td>
+    </tr>
+  <% end %>
+</table>
